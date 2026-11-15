@@ -1,5 +1,0 @@
-# License selection required
-
-No license has been selected for JARVIS.
-
-Before publishing this project, the copyright holder should choose and add an approved open-source license (for example, MIT, Apache-2.0, or GPL-3.0) after reviewing the implications for the Python code, ESP32 firmware, Android companion, model weights, and any third-party assets. Until then, do not treat this repository as licensed for redistribution.
