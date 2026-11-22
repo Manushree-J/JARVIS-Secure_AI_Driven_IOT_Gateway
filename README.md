@@ -6,18 +6,15 @@ JARVIS is a Windows-based voice assistant and IoT control system. It combines wa
 
 ## Problem and objectives
 
-JARVIS is intended to provide a hands-free local interface for desktop tasks, home-appliance control, sensor monitoring, and contextual conversation. The project prioritizes local text inference, explicit hardware commands, modular skills, and retained conversation context while keeping credentials outside source control.
+**JARVIS** is designed around a **privacy-first, local-first architecture** that delivers a hands-free interface for desktop automation, home-appliance control, live sensor telemetry, and contextual conversation. Instead of relying on cloud LLM APIs, core reasoning and memory run entirely on-machine via **Ollama (Qwen 2.5 7B)**, **ChromaDB**, and a local **Obsidian Markdown vault**—ensuring low-latency execution, deterministic hardware control, and zero cloud exposure for personal context or credentials.
 
 ## Features
 
-- "Hey Jarvis" detection through OpenWakeWord.
-- Speech recognition through `SpeechRecognition` and microphone input.
-- Local Qwen 2.5 7B text responses through Ollama's OpenAI-compatible API; no cloud fallback in the text path.
-- ElevenLabs text-to-speech output.
-- Modular skill routing for Windows, browser, coding, files, system status, Gmail, Calendar, Obsidian-related actions, ESP32, and vision.
-- FastAPI/WebSocket GUI gateway plus the existing CustomTkinter desktop UI.
-- ChromaDB semantic memory and Markdown conversation storage in an external Obsidian-style vault.
-- Optional camera image analysis through the existing OpenRouter-backed vision skill and local object detection through YOLO.
+- **Full Bidirectional Voice Pipeline:** Combines always-on `"Hey Jarvis"` wake-word detection (**OpenWakeWord**) and microphone speech-to-text capture (**SpeechRecognition**) with natural neural voice synthesis (**ElevenLabs TTS**) for seamless hands-free conversation.
+- **Privacy-First Local AI & Memory:** Runs **Qwen 2.5 7B** locally through Ollama’s OpenAI-compatible API with zero cloud fallback in the text path, backed by **ChromaDB** semantic vector memory and an external **Obsidian-style Markdown vault**.
+- **Custom Desktop GUI & Live Telemetry Dashboard:** Features a dedicated **CustomTkinter** desktop UI (`jarvis_ui.py`) and a **FastAPI/WebSocket** HUD (`gui_server.py`) for real-time chat interaction, visual system status, and live **ESP32** environmental sensor telemetry alongside the physical TFT/OLED hardware displays.
+- **Modular Deterministic Skill Routing:** Dispatches explicit commands across Windows system controls, browser automation, coding workflows, file management, Gmail, Google Calendar, Obsidian vault actions, ESP32 relays, and computer vision.
+- **Hybrid Camera Vision:** Supports local real-time object detection via **Ultralytics YOLO** and **OpenCV**, with optional cloud image analysis through OpenRouter (`skills/ai_vision_skill.py`).
 
 ## Architecture
 
@@ -72,6 +69,7 @@ The following images show the current JARVIS implementation, including its hardw
 ### 8. Desktop User Interface
 
 ![JARVIS User Interface](Results/userinterface.jpg)
+*Custom desktop interface displaying real-time conversational logs, active skill/engine status, and live ESP32 sensor telemetry alongside the physical TFT/OLED hardware displays.*
 
 ## ESP32, MQTT, sensors, and relays
 
