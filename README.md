@@ -1,4 +1,4 @@
-# JARVIS
+# JARVIS — Local Voice Assistant & IoT Control Gateway
 
 JARVIS is a Windows-based voice assistant and IoT control system. It combines wake-word voice interaction, local Qwen inference through Ollama, ElevenLabs speech output, deterministic skills, an ESP32/MQTT hardware bridge, environmental sensors, camera vision, and persistent memory.
 
@@ -181,4 +181,4 @@ Never commit `.env`, OAuth client files, tokens, private keys, memory databases,
 
 Rotate any credential that has ever been stored in a local file exposed outside the machine.
 
-No GitHub upload, repository creation, commit, push, or deployment is performed by this cleanup.
+
