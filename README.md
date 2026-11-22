@@ -174,14 +174,6 @@ Do not start duplicate JARVIS, GUI, or WebSocket processes. Say "Hey Jarvis" aft
 - The Android companion is currently a starter Compose application rather than a complete JARVIS control client.
 - No automated end-to-end hardware test is included.
 
-## Future improvements
-
-- Move external vault paths and all remaining runtime paths into configuration.
-- Add a documented service supervisor that prevents duplicate processes.
-- Add mocked MQTT, Ollama, memory, and skill-router tests.
-- Implement explicit motion announcement policy with throttling and user controls.
-- Complete the Android companion's authenticated JARVIS/MQTT interface.
-- Add calibrated sensor handling, safer relay deployment documentation, and CI checks.
 
 ## Security and repository policy
 
